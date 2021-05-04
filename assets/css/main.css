@@ -1,0 +1,117 @@
+/* general style */
+*{
+    margin: 0;
+    padding: 0;
+}
+/* navbar */
+nav{
+    background-color: #1e202b;
+}
+.navbar-brand h4{
+    font-size: 16px;
+    margin-bottom: 0;
+}
+.navbar-brand p{
+    font-size: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #999;
+}
+nav .nav-link{
+    transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    padding: 4px 24px!important;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    border: 2px solid transparent;
+}
+
+nav .nav-item:hover .nav-link,nav .nav-link.active{
+    color: #009ad8!important;
+    border-color:  #009ad8;
+}
+/* search */
+.weather-body{
+    background-image: url("../images/banner.png");
+    background-repeat: no-repeat;
+    background-color: #1e202b;
+}
+.search .find-btn{
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    right: 5px;
+}
+
+.search input,.search input:focus{
+    background-color: #1e202b;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    color: #fff;
+}
+.search input::placeholder{
+    color: #999;
+}
+/* forcast cards */
+.forcast-cards{
+    background-color: #1e202b;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.forcast-cards .forcast-card{
+    height: 100%;
+    background-color: rgba(255,255,255,.1);
+
+}
+.forcast-cards .forcast-card.light{
+    background-color: rgba(0,0,0,.1);
+}
+.forcast-cards .forcast-card .forcast-header{
+    background-color: rgba(0,0,0,.1);
+    padding: 4px 16px;
+    color: #bfc1c8;
+    text-transform: capitalize;
+}
+
+.forcast-cards .forcast-card .forcast-body{
+    padding: 16px;
+    color: #bfc1c8;
+}
+.forcast-cards .forcast-card .forcast-body .city{
+    margin-bottom: 16px;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+.forcast-cards .forcast-card .forcast-body .temp{
+    padding: 0 16px;
+}
+.forcast-cards .forcast-card .forcast-body .temp .temp-deg{
+    font-size: 64px;
+    color: #fff;
+}
+.forcast-cards .forcast-card .forcast-body  .status{
+    color: #009ad8;
+    margin-bottom: 16px;
+    margin-top: 32px;
+}
+.main-deg{
+    font-size: 18px!important;
+    margin-top: 40px;
+}
+.sub-deg{
+    font-size: 14px!important;
+    color: #bfc1c8!important;
+}
