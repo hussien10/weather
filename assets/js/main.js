@@ -7,13 +7,17 @@ let lon;
 let cords
 // function to get your location
 function getLocation() {
+    let options={
+        enableHighAccuracy: true
+    }
     function showPosition(l) {
-        lat = (l.coords.latitude).toFixed(2);
-        lon = (l.coords.longitude).toFixed(2);
+        lat = l.coords.latitude;
+        lon = l.coords.longitude;
         cords = lat + "," + lon;
+        
         (async function () {
             let weatherData = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=e5ffba3f06ab47b3a9103315210105&days=3&q=${cords}`)
-            if (weatherData.ok && 400 != weatherData.status) {
+            if (weatherData.ok && weatherData.status==200) {
                 response = await weatherData.json();
 
                 displayData()
@@ -27,7 +31,7 @@ function getLocation() {
         Search("cairo")
     }
     if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition, error);
+        navigator.geolocation.getCurrentPosition(showPosition, error,options);
     }
 
 
@@ -38,7 +42,7 @@ async function Search(searchValue) {
         getLocation()
     }
     let weatherData = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=e5ffba3f06ab47b3a9103315210105&days=3&q=${searchValue}`)
-    if (weatherData.ok && 400 != weatherData.status) {
+    if (weatherData.ok &&  weatherData.status==200) {
         response = await weatherData.json();
 
         displayData()
