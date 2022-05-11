@@ -41,7 +41,7 @@ async function Search(searchValue) {
     if (searchValue == "") {
         getLocation()
     }
-    let weatherData = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=e5ffba3f06ab47b3a9103315210105&days=3&q=${searchValue}`)
+    let weatherData = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=fd095a69b9784c0988920728221105&days=3&q=${searchValue}`)
     if (weatherData.ok &&  weatherData.status==200) {
         response = await weatherData.json();
 
