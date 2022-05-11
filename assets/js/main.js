@@ -16,7 +16,7 @@ function getLocation() {
         cords = lat + "," + lon;
         
         (async function () {
-            let weatherData = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=23597545709f48dcb07115932211708&days=3&q=${cords}`)
+            let weatherData = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=fd095a69b9784c0988920728221105&days=3&q=${cords}`)
             if (weatherData.ok && weatherData.status==200) {
                 response = await weatherData.json();
 
