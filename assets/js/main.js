@@ -31,7 +31,7 @@ function getLocation() {
         Search("cairo")
     }
     if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition, error,options);
+        navigator.geolocation.watchPosition(showPosition, error,options);
     }
 
 
